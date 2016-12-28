@@ -2,6 +2,7 @@ package com.ecc.mavenone;
 
 
 import java.util.Scanner;
+import org.apache.commons.lang3.StringUtils;
 
 public class TableTest {
 
@@ -58,8 +59,7 @@ public class TableTest {
 		String result="";
 		while(result.length()<min || result.length()>max){
 			System.out.println(message);
-			result = read.nextLine();
-			result=result.replaceAll("\\s+", "");
+			result = StringUtils.deleteWhitespace(read.nextLine()); // deleting whitespace inputs using stringutils
 		}
 		return result;
 	}
