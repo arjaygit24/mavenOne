@@ -15,7 +15,7 @@ public class TableTest {
 		}
 		while(choice!=7){
 			switch(choice){
-			case 1: 
+			case 1:
 				table.print();
 				break;
 			case 2:
@@ -35,7 +35,7 @@ public class TableTest {
 				table.reset(nRow, nCol);
 				break;
 			case 5:
-				int addNumRow = checkNumber("Enter number of rows to add. ",0,100); 
+				int addNumRow = checkNumber("Enter number of rows to add. ",0,100);
 				table.addRow(addNumRow);
 				break;
 			case 6:
@@ -47,7 +47,12 @@ public class TableTest {
 			choice=checkNumber("Choose from the following. ",1,8);
 		}
 	}
-	
+
+	public static void printOptions(){
+		System.out.println("Choose from the following ");
+		System.out.println("1. Print 2. Search 3. Edit 4. Reset 5. Add Row 6. Sort Table 7. Exit ");
+	}
+
 	public static String checkString(String message, int min, int max){
 		Scanner read = new Scanner(System.in);
 		String result="";
@@ -58,12 +63,7 @@ public class TableTest {
 		}
 		return result;
 	}
-	
-	public static void printOptions(){
-		System.out.println("Choose from the following ");
-		System.out.println("1. Print 2. Search 3. Edit 4. Reset 5. Add Row 6. Sort Table 7. Exit ");
-	}
-	
+
 	public static int checkNumber(String message,int min, int max){
 		Scanner read = new Scanner(System.in);
 		int number=0;
